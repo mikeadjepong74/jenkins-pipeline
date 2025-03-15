@@ -1,21 +1,21 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('CodeScan') {
             steps {
-                echo 'Building..'
+                sh 'trivy --version'
                 sh 'uname -r'
                 sh 'nproc'
             }
         }
-        stage('Test') {
+        stage('dockerImageBuild') {
             steps {
-                echo 'Testing..'
+                echo 'docker -v'
             }
         }
-        stage('Deploy') {
+        stage('pushImage') {
             steps {
-                echo 'Deploying....'
+                echo 'docker ps'
             }
         }
     }
