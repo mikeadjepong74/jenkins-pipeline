@@ -36,7 +36,7 @@ pipeline {
                 sh "docker push \
                 $IMAGE_ECR_REPO:latest"
                 sh "docker push \
-                $IMAGE_ECR_REPO:v1.$BUILD_NUMBER'
+                $IMAGE_ECR_REPO:v1.$BUILD_NUMBER"
             }
         }
     }
