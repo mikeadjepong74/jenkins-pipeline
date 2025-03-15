@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'uname -r'
+                sh 'nproc'
             }
         }
         stage('Test') {
