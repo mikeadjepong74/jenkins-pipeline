@@ -7,7 +7,7 @@ pipeline {
                 sh 'cat result.html'
             }
         }
-        stage9('dockerLogin') {
+        stage('dockerLogin') {
            steps{
                 sh 'aws ecr get-login-password --region us-east-1 | \
             docker login --username AWS --password-stdin 746669202848.dkr.ecr.us-east-1.amazonaws.com'
