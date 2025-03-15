@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('CodeScan') {
             steps {
-                sh 'trivy fs . severity:CRITICAL, HIGH'
+                sh 'trivy fs . -o result.html'
                 sh 'uname -r'
                 sh 'nproc'
             }
